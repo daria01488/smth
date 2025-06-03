@@ -108,7 +108,7 @@ Below is a brief overview of each main interface screen:
 - On launch, users choose between **Manager** or **Worker** mode.  
 - The selection determines which features are shown after login.  
 
-![User Selection Screen](\screenshots\automagik-user.jpg)
+![User Selection Screen](/screenshots/automagik-user.jpg)
 
 ### 2. Sign-In Window
 
@@ -120,9 +120,9 @@ Below is a brief overview of each main interface screen:
   - Each new user receives a system-generated activation email (or temporary password).  
 - Users can also change their email or password via dedicated “Change Email” and “Change Password” dialogs.
 
-![Sign-In Window](\screenshots\worker-sign-in.jpg)
-![Sign-In Window](\screenshots\manager-sign-in.jpg)
-![Sign-In Window](\screenshots\manager-create.jpg)
+![Sign-In Window](/screenshots/worker-sign-in.jpg)
+![Sign-In Window](/screenshots/manager-sign-in.jpg)
+![Sign-In Window](/screenshots/manager-create.jpg)
 
 ### 3. Manager: Cars / Clients Panel
 
@@ -141,7 +141,7 @@ Below is a brief overview of each main interface screen:
 
 > In AutoMagik, “Client” is synonymous with “Vehicle”—each vehicle entry represents one client.
 
-![Cars / Clients Panel](\screenshots\manager-cars.jpg)
+![Cars / Clients Panel](/screenshots/manager-cars.jpg)
 
 ### 4. Manager: Tasks / Workers Panel
 
@@ -181,7 +181,7 @@ Below is a brief overview of each main interface screen:
   - **Mark Task as Completed**  
   - **View Historical Comments** for context
 
-![Worker Tasks Panel](screenshots\worker-tasks.jpg)
+![Worker Tasks Panel](/screenshots/worker-tasks.jpg)
 
 ---
 
