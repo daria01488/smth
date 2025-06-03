@@ -44,27 +44,6 @@ Only authorized users (workshop employees with active accounts) can access the s
 - Firebase Realtime Database (client-side SDK)  
 - Google Vehicle Data API (optional integration)
 
-<!-- intro paragraph aboud the app that was created from this describtion: The purpose of this document is to present the assumptions and specifications
-of the planned activities within the implementation of the AutoMagik application - a system supporting
-the management of a car repair shop. The document is intended for members of the
-project team responsible for implementing, testing and adapting the
-functionality of the system in accordance with the presented requirements. It is also
-a reference for the team responsible for creating and updating the project documentation. The document
-covers the requirements for version 1.0 of the software.
-The project involves the creation and implementation of a desktop application
-enabling management of the customer and employee service process in a car repair shop. The system
-will support the allocation and monitoring of repair orders, internal communication
-between users, and the collection of vehicle data. The application will be
-adapted to the needs of small and medium-sized workshops, providing a simple
-user interface and basic administrative functions available to privileged users.
-The application requires an active internet connection to synchronize with the Firebase database and communicate with external services (e.g. vehicle API).
-The application must be implemented in C++ using the Qt library to ensure compatibility between systems and easy integration with the user interface.
-Only authorized users can use the application - workshop employees with an active account in the system.
-The client-server system will work in an architecture where the client is a desktop application and the backend - Firebase as a cloud service.
-Add keywords for finding my app in github-->
-
----
-
 ## Key Features
 
 ### User Modes
@@ -144,11 +123,11 @@ Below is a brief overview of each main interface screen:
   - Each new user receives a system-generated activation email (or temporary password).  
 - Users can also change their email or password via dedicated “Change Email” and “Change Password” dialogs.
 
-![Workers-Sign-In Window](/screenshots/worker-sign-in.jpg)
+![Workers-Sign-In Window](/screenshots/worker-sing-in.jpg)
 
-![Managers-Sign-In Window](/screenshots/manager-sign-in.jpg)
+![Managers-Sign-In Window](/screenshots/manager-sing-in.jpg)
 
-![Create-Manader Window](/screenshots/manager-create.jpg)
+![Create-Manader Window](/screenshots/manger-create.jpg)
 
 ### 3. Manager: Cars / Clients Panel
 
