@@ -2,6 +2,26 @@
 
 ## AutoMagik is a fully functional example project written in C++ using Qt, designed to support the management of a local car repair workshop. It provides a desktop client interface for workshop employees (managers and workers) to handle service orders, internal communication, and vehicle data collection. The backend is powered by Firebase for real-time synchronization and cloud storage.
 
+## Table of Contents
+
+- [Overview](#overview)  
+- [Key Features](#key-features)  
+  - [User Modes](#user-modes)  
+  - [Manager Functions](#manager-functions)  
+  - [Worker Functions](#worker-functions)  
+- [User Interface Walkthrough](#user-interface-walkthrough)  
+  1. [User Selection Screen](#1-user-selection-screen)  
+  2. [Sign-In Window](#2-sign-in-window)  
+  3. [Manager: Cars / Clients Panel](#3-manager-cars--clients-panel)  
+  4. [Manager: Tasks / Workers Panel](#4-manager-tasks--workers-panel)  
+  5. [Worker: Tasks Panel](#5-worker-tasks-panel)  
+- [Installation](#installation)  
+  - [Prerequisites](#prerequisites)  
+  - [Clone and Configure](#clone-and-configure)  
+  - [Building on Windows/macOS/Linux](#building-on-windowsmacoslinux)  
+  - [Running the Application](#running-the-application)  
+- [Keywords (for GitHub search)](#keywords-for-github-search)  
+
 ## Overview
 
 The purpose of AutoMagik is to present the assumptions and specifications for version 1.0 of a desktop application that supports car repair shop management. AutoMagik allows small and medium-sized workshops to:
@@ -13,6 +33,10 @@ The purpose of AutoMagik is to present the assumptions and specifications for ve
 - Sync all information in real time through a Firebase backend
 
 Only authorized users (workshop employees with active accounts) can access the system. The application requires an active internet connection to synchronize with Firebase and communicate with any external vehicle APIs.
+
+---
+
+## Technologies used
 
 **Tech Stack:**
 - C++ 17  
@@ -120,9 +144,11 @@ Below is a brief overview of each main interface screen:
   - Each new user receives a system-generated activation email (or temporary password).  
 - Users can also change their email or password via dedicated “Change Email” and “Change Password” dialogs.
 
-![Sign-In Window](/screenshots/worker-sign-in.jpg)
-![Sign-In Window](/screenshots/manager-sign-in.jpg)
-![Sign-In Window](/screenshots/manager-create.jpg)
+![Workers-Sign-In Window](/screenshots/worker-sign-in.jpg)
+
+![Managers-Sign-In Window](/screenshots/manager-sign-in.jpg)
+
+![Create-Manader Window](/screenshots/manager-create.jpg)
 
 ### 3. Manager: Cars / Clients Panel
 
@@ -186,8 +212,90 @@ Below is a brief overview of each main interface screen:
 ---
 
 ## Installation
+### Prerequisites
+Before installing and building AutoMagik, ensure you have the following installed on your system:
 
+1. **Qt 6.x (Qt Widgets / Qt Core / Qt Network / Qt SQL)**  
+   - Download from [qt.io](https://www.qt.io/download).  
+   - Make sure the Qt development binaries (qmake / cmake support) are in your PATH.
+
+2. **C++17-Compatible Compiler**  
+   - Windows: MSVC 2019 or newer (via Visual Studio)  
+   - macOS: Xcode (12.0 or newer)  
+   - Linux: GCC 9.0 or newer / Clang 10.0 or newer
+
+3. **CMake 3.16+ (optional)**  
+   - If you prefer to build via CMake rather than qmake.
+
+4. **Git**  
+   - For cloning the repository and managing version control.
+
+5. **Firebase Account & Project**  
+   - Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com).  
+   - Enable **Realtime Database** (or Firestore, if you adapt the code).  
+   - Generate a Web/App config snippet (API Key, Auth Domain, Database URL).  
+   - Download the `google-services.json` (Android) or `GoogleService-Info.plist` (iOS) if you plan to test on those platforms—otherwise, we only need the REST credentials for the desktop client.
+
+6. **RapidJSON (or nlohmann/json)**  
+   - For JSON parsing (Firebase REST integration).  
+   - The project includes a copy of RapidJSON in the `third_party/rapidjson/` folder by default.
 
 ---
-## How to Buid and Install AutoMagik Application to contribute
+### Clone and Configure
+1. **Clone the Repository**  
+   Open Terminal:
+   ```bash
+   git clone https://github.com/<your-username>/AutoMagik.git
+   cd AutoMagik
+   ```
 
+2. **Configure Firebase Credentials**					
+   Rename config/firebase.example.json to config/firebase.json.
+   Open config/firebase.json and paste your Firebase project’s:
+       apiKey
+       authDomain
+       databaseURL
+       projectId
+       storageBucket
+       messagingSenderId
+       appId
+
+Example:
+```json
+{
+  "apiKey": "YOUR_API_KEY_HERE",
+  "authDomain": "your-project.firebaseapp.com",
+  "databaseURL": "https://your-project.firebaseio.com",
+  "projectId": "your-project",
+  "storageBucket": "your-project.appspot.com",
+  "messagingSenderId": "1234567890",
+  "appId": "1:1234567890:web:abcdef123456"
+}
+```
+
+### Building on Windows/macOS/Linux
+Using Qt Creator:
+    1. Open AutoMagik.pro in Qt Creator.
+    2. Configure a build kit for your OS (e.g. MinGW, MSVC, Clang).
+    3. Click Build > Run.
+
+### Running the Application
+
+Running the Application
+After building, you can run the application directly:
+
+- **From Qt Creator:**
+  -  Press Run.
+- **From terminal:**
+  - On Linux/macOS:
+    ```sh./AutoMagik```
+  - On Windows:
+   ```shAutoMagik.exe```
+
+Make sure your Firebase credentials and configuration are correctly set up. On first launch, log in using the provided manager credentials.
+
+---
+
+## Keywords 
+Qt C++ Car Repair Workshop Management Desktop App Firebase Qt6 Automotive Task Tracking Employee Manager
+AutoMagik Mechanic Shop Repair Order System Cross-Platform GUI CRM
