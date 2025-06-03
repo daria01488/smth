@@ -39,6 +39,8 @@ Only authorized users can use the application - workshop employees with an activ
 The client-server system will work in an architecture where the client is a desktop application and the backend - Firebase as a cloud service.
 Add keywords for finding my app in github-->
 
+---
+
 ## Key Features
 
 ### User Modes
@@ -95,6 +97,8 @@ Each mode unlocks a distinct set of functions, as detailed below.
 4. **Communication**  
    - Post and view comments within tasks to communicate with managers or other workers  
 
+---
+
 ## User Interface Walkthrough
 
 Below is a brief overview of each main interface screen:
@@ -104,18 +108,21 @@ Below is a brief overview of each main interface screen:
 - On launch, users choose between **Manager** or **Worker** mode.  
 - The selection determines which features are shown after login.  
 
-![User Selection Screen](docs/screenshots/user_selection.png)
+![User Selection Screen](\screenshots\automagik-user.jpg)
 
 ### 2. Sign-In Window
 
 - Both Manager and Worker can sign in with **Email** and **Password**.  
 - First-time login for Managers uses preset credentials (provided by the workshop owner).  
+- User can create new Manager accounts. 
 - After the Manager is authenticated:
-  - Managers can create new Worker or Manager accounts.  
+	- Manager can create new Worker accounts.
   - Each new user receives a system-generated activation email (or temporary password).  
-- Users can also change their email or password via dedicated “Change Email” and “Change Password” dialogs.
+- Users can also change their email or password via dedicated â€œChange Emailâ€ and â€œChange Passwordâ€ dialogs.
 
-![Sign-In Window](docs/screenshots/sign_in.png)
+![Sign-In Window](\screenshots\worker-sign-in.jpg)
+![Sign-In Window](\screenshots\manager-sign-in.jpg)
+![Sign-In Window](\screenshots\manager-create.jpg)
 
 ### 3. Manager: Cars / Clients Panel
 
@@ -132,9 +139,9 @@ Below is a brief overview of each main interface screen:
   - **Delete Vehicle**  
   - **Search / Filter** by license plate, owner, or VIN  
 
-> In AutoMagik, “Client” is synonymous with “Vehicle”—each vehicle entry represents one client.
+> In AutoMagik, â€œClientâ€ is synonymous with â€œVehicleâ€â€”each vehicle entry represents one client.
 
-![Cars / Clients Panel](docs/screenshots/manager_cars.png)
+![Cars / Clients Panel](\screenshots\manager-cars.jpg)
 
 ### 4. Manager: Tasks / Workers Panel
 
@@ -143,7 +150,7 @@ Below is a brief overview of each main interface screen:
   - Task ID (auto-generated)  
   - Vehicle (linked to Cars/Clients)  
   - Assigned Worker(s)  
-  - Task Description (e.g., “Oil change”, “Brake inspection”)  
+  - Task Description (e.g., â€œOil changeâ€, â€œBrake inspectionâ€)  
   - Priority (Low / Medium / High)  
   - Status (Pending / In Progress / Completed)  
   - Estimated Completion Date  
@@ -158,9 +165,7 @@ Below is a brief overview of each main interface screen:
   - Activate / Deactivate accounts  
   - Reset passwords or change user roles  
 
-![Tasks / Workers Panel](docs/screenshots/manager_tasks.png)
-
----
+![Tasks / Workers Panel](/screenshots/manager-tasks.jpg)
 
 ### 5. Worker: Tasks Panel
 
@@ -176,12 +181,13 @@ Below is a brief overview of each main interface screen:
   - **Mark Task as Completed**  
   - **View Historical Comments** for context
 
-![Worker Tasks Panel](docs/screenshots/worker_tasks.png)
+![Worker Tasks Panel](screenshots\worker-tasks.jpg)
 
+---
 
 ## Installation
 
 
-
+---
 ## How to Buid and Install AutoMagik Application to contribute
 
